@@ -2,7 +2,7 @@
 
 **Experimental temporal-traffic analysis and response-modeling prototype.**
 
-Mirage Flow is a private, single-developer research project for studying whether a known timing pattern can be recovered from packet inter-arrival times after the flow has been affected by jitter, delay, and packet loss.
+Mirage Flow is an independent, publicly documented single-developer research project for studying whether a known timing pattern can be recovered from packet inter-arrival times after the flow has been affected by jitter, delay, and packet loss.
 
 The repository combines:
 
