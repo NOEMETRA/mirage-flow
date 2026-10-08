@@ -146,6 +146,19 @@ mirage-flow/
 
 The notebook contains earlier algorithm-development material and should be treated as a research reference rather than a separate production implementation.
 
+## Offline validation
+
+The repository now includes a narrow, repeatable contract suite for the **software model**:
+
+```bash
+python -m pip install "numpy>=1.24,<3"
+python -m unittest discover -s tests -v
+```
+
+These tests exercise timestamp handling, synthetic embedding invariants, short-window detector behavior, source-frequency context, and the hysteresis controller. CI also compiles Python sources. The suite intentionally does **not** sniff interfaces, transmit packets, apply traffic shaping, or contact a third-party target.
+
+Passing these tests means only that the selected software contracts held under the test conditions. It does **not** establish covert-channel discovery, real-network detection performance, or operational containment.
+
 ## Requirements
 
 - Python 3.8+
